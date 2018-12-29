@@ -3,7 +3,7 @@ layout: default
 title: Mila Sukhova Blog!!!
 ---
 
-<!DOCTYPE HTML>
+<!--<!DOCTYPE HTML> -->
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
@@ -13,7 +13,48 @@ title: Mila Sukhova Blog!!!
 								<p>Тут ниже представлены посты - тычете на них и проваливаетесь в полную версию. Прикольно да?</p>
 							</header>
 							<section class="tiles">
-								<article class="style1">
+								{% for post in site.posts %}
+									<article class="style1">
+										<span class="image">
+											<img src="images/pic01.jpg" alt="" />
+										</span>
+										<a href="{{ post.url }}" title="{{ post.title }}">
+											<h2>{{ post.title }}</h2>
+											<div class="content">
+												<p>{{ post.date | date_to_string }}</p>
+											</div>
+										</a>
+									</article>
+								
+									<!--<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li> -->
+								{% endfor %}
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+							<!--	<article class="style1">
 									<span class="image">
 										<img src="images/pic01.jpg" alt="" />
 									</span>
@@ -144,8 +185,8 @@ title: Mila Sukhova Blog!!!
 											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
 										</div>
 									</a>
-								</article>
+								</article> -->
 							</section>
 						</div>
 					</div>
-</html>
+<!-- </html>  -->
