@@ -1,9 +1,3 @@
-/*
-	Phantom by Pixelarity
-	pixelarity.com | hello@pixelarity.com
-	License: pixelarity.com/license
-*/
-
 (function($) {
 
 	skel.breakpoints({
@@ -31,6 +25,10 @@
 		// Touch?
 			if (skel.vars.mobile)
 				$body.addClass('is-touch');
+			
+		// Random
+			var randomNumber = 'style' + Math.floor(Math.random() * 5);
+			var myElement = document.querySelector("#randombox");
 
 		// Forms.
 			var $form = $('form');

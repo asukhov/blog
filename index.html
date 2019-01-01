@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Mila Sukhova Blog!!!
+title: Mila Sukhova Blog
 ---
 
 <!--<!DOCTYPE HTML> -->
@@ -14,9 +14,18 @@ title: Mila Sukhova Blog!!!
 							</header>
 							<section class="tiles">
 								{% for post in site.posts %}
-									<article class="style1">
+								
+									<article class="style1" id="someId">
+										<script>
+											function getRandom(max){
+													return "style"+Math.floor(Math.random() * max);
+												}
+							
+											var element = document.getElementById("someId");
+											element.className=getRandom(6);
+										</script>
 										<span class="image">
-											<img src="images/pic01.jpg" alt="" />
+											<img src="images/posts/2018-05-15/17.jpg" alt="" />
 										</span>
 										<a href="{{ post.url }}" title="{{ post.title }}">
 											<h2>{{ post.title }}</h2>
@@ -25,7 +34,13 @@ title: Mila Sukhova Blog!!!
 											</div>
 										</a>
 									</article>
-								
+									
+									<!--<script>
+										function getRandom(max){
+											return "style"+Math.floor(Math.random() * max);
+										}
+										document.getElementById('XXX').innerHTML = getRandom(6);
+									</script> -->								
 									<!--<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li> -->
 								{% endfor %}
 								

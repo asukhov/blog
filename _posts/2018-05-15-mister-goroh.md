@@ -3,7 +3,30 @@ layout: post
 title: "Мистер Горох"
 date: 2018-05-15
 ---
+
+<p style="text-align:center;"><img src="/images/posts/2018-05-15/1.jpg" alt=""></p>
+
+<div class="4u"><span class="image"><img src="/images/posts/2018-05-15/1.jpg" alt="" /></span></div>
+
 ![Mila Sukhova Blog](/images/posts/2018-05-15/1.jpg)
+
+
+<div id="yourId"></div>
+
+<script>
+function getRandom(max){
+return "style"+Math.floor(Math.random() * max);
+}
+document.getElementById('yourId').innerHTML = getRandom(6);
+</script>
+
+<script>
+	function getRandom(max){
+			return "style"+Math.floor(Math.random() * max);
+		}
+	var element = document.getElementByClass('XXX').innerHTML = getRandom(6);
+	element.classList.add("mystyle");
+</script>
 
 Всем доброго!
 
