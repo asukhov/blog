@@ -26,9 +26,25 @@
 			if (skel.vars.mobile)
 				$body.addClass('is-touch');
 			
-		// Random
-			var randomNumber = 'style' + Math.floor(Math.random() * 5);
-			var myElement = document.querySelector("#randombox");
+		// Ajax
+			$(".loadMore").click(loadMorePosts);
+			function loadMorePosts() {
+			  var _this = this;
+			  var $blogContainer = $("#blogContainer");
+			  var nextPage = parseInt($blogContainer.attr("data-page")) + 1;
+			  var totalPages = parseInt($blogContainer.attr("data-totalPages"));
+			  $(this).addClass("loading");
+  
+			  $.get("/blog/page" + nextPage, function (data) {
+			    var htmlData = $.parseHTML(data);
+			    var $articles = $(htmlData).find("article");
+			    $blogContainer.attr("data-page", nextPage).append($articles);
+			    if ($blogContainer.attr("data-totalPages") == nextPage) {
+			      $(".loadMore").remove();
+			    }
+			    $(_this).removeClass("loading");
+			  });  
+			}
 
 		// Forms.
 			var $form = $('form');

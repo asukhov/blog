@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Мистер Банан"
+title: "Горох"
 date: 2018-09-15
 ---
 ![Mila Sukhova Blog](/images/posts/2018-05-15/1.jpg)
