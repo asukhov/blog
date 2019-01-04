@@ -1,0 +1,39 @@
+### your site title here
+
+title: Mila Sukhova Blog
+baseurl: /bare-minimum
+permalink: /:title
+
+
+# Tracker
+analytics: UA-73765413-1
+
+
+paginate: 6
+paginate_path: /page:num/
+
+
+sass:
+    style: compressed
+
+  
+  
+#optimization
+#compress.html
+compress_html:
+  clippings: [html,div, p, ul, td, h1, h2, h3, h4,link, meta, footer, nav, img, header, hr, br, head, style, li, ul, ol, time, main, script, title]
+  comments: ["<!-- ", " -->"]
+  endings: [all]
+  ignore:
+    envs: [local]
+  blanklines: false
+  profile: false
+  startings: []
+
+
+
+exclude:
+- README.md
+
+
+plugins: [jekyll-paginate]
