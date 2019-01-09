@@ -1839,6 +1839,28 @@
 		text-align: right;
 	}
 
+/* Ajax Pagination */
+	
+	.loadMore {
+	  @extend %textButton;
+	  position: relative;
+	  display: block;
+	  margin: 2.5em auto;
+  
+	  &.loading {
+	    &::after {
+	      position: absolute;
+	      left: 0;
+	      right: 0;
+	      background-color: white;
+	      width: 100%;
+	      content: 'Loading...';
+	      color: #bcbcbc;
+	    }
+	  } 
+	}
+
+
 /* Section/Article */
 
 	section.special, article.special {
@@ -2731,6 +2753,10 @@
 						margin-bottom: 0;
 					}
 
+			.tiles article.style > .image:before {
+				background-color: #e7f5fd;
+			}			
+			
 			.tiles article.style0 > .image:before {
 				background-color: #f2849e;
 			}
@@ -2754,7 +2780,9 @@
 			.tiles article.style5 > .image:before {
 				background-color: #8499e7;
 			}
-
+			
+			
+			
 			body:not(.is-touch) .tiles article:hover > .image {
 				-moz-transform: scale(1.1);
 				-webkit-transform: scale(1.1);
